@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.wrapper {
+  width: clamp(200px, 100%, 300px);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.background-color {
+  background-color: #6f2f1b;
+}
+
+.background-image {
+  background-image: url("https://www.incommonwith.com/cdn/shop/files/Quarters_InCommon_With__032728_20a0bb8b-737e-4552-91b6-ee6088eca598.jpg?v=1724079123&width=700");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Button styles */
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  /* Typography */
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+
+  /* Accessibility */
+  min-width: 44px;
+  min-height: 44px;
+
+  /* Remove default styles */
+  appearance: none;
+
+  /* Better touch handling */
+  touch-action: manipulation;
+
+  /* Create stacking context */
+  isolation: isolate;
+}
+
+/* Blur effect */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  transition: background 0.2s ease;
+}
+
+/* Focus styles */
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Hover styles */
+@media (hover: hover) {
+  .button:hover::before {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Active state */
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button text container */
+.button__text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Icon styles */
+.button__icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::before {
+    transition: none;
+  }
+}

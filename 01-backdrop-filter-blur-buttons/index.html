@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern button component example" />
+    <title>Button Component</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper background-color">
+        <!-- Default Button -->
+        <button class="button" type="button" aria-label="Primary action">
+          <span class="button__text">Click me</span>
+        </button>
+      </div>
+
+      <div class="wrapper background-image">
+        <!-- Button with Icon -->
+        <button class="button" type="button" aria-label="Download file">
+          <span class="button__text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                fill="currentColor"
+                d="M12 15.248q-.161 0-.298-.053t-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183-.136.053-.298.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144.357.144.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144.357.144.143.356v1.923q0 .691-.462 1.153T17.384 19z"
+              />
+            </svg>
+            <span class="button__label">Download</span>
+          </span>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
